@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage[framed]{matlab-prettifier}
+\usepackage{graphicx}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumerate}
+\usepackage{circuitikz}
+
+\begin{document}
+\begin{center}
+
+{\huge EE5811 : FPGA LAB}\\
+{\large ASSIGNMENT 1}
+
+\end{center}
+Himanshu Yadav \hfill \today \\ IS21MTECH11003
+
+\vspace{15pt}
+\hrule
+\vspace{5pt}
+
+
+\section*{Problem}
+
+Question 6) b) from papers/cbse/cs/2017.pdf\\
+Draw the logic circuit of the following boolean expression using only NOR Gates :
+
+\begin{center}
+    ( A + B ) . ( C + D )
+\end{center}
+
+
+\vspace{15pt}
+\hrule
+\vspace{5pt}
+
+\section*{Solution}
+To convert the above expression to NOR only logic circuit we will take the Double conjugate of the whole expression and then use de Morgan's Theorem to simplify it.
+
+\begin{center}
+   $( A + B ) . ( C + D )$\\
+   \vspace{5pt}
+   $\overline{\overline{( A + B ) . ( C + D )}}$
+   \\
+   \vspace{5pt}
+   $\overline{\overline{( A + B )} + \overline{( C + D )}}$
+    
+\end{center}
+The last expression can easily be drawn using NOR gates in the following manner
+
+\begin{center}
+    
+\begin{circuitikz}
+\draw
+(0,0)node[nor port](mynor1){}
+
+(0,2)node[nor port](mynor2){}
+
+(3,1)node[nor port](mynor3){}
+
+(mynor1.out)|-(mynor3.in 2)
+(mynor2.out)|-(mynor3.in 1);
+
+\node at (-1.6,0.3) {$C$};
+\node at (-1.6,1.7) {$B$}; 
+\node at (-1.6,-0.3) {$D$};
+\node at (-1.6,2.3) {$A$};
+\node at (1,2) {$\overline{( A + B )}$};
+\node at (1,0) {$\overline{( C + D )}$};
+\node at (5,1) {$\overline{\overline{( A + B )} + \overline{( C + D )}}$};
+
+\end{circuitikz}
+
+\end{center}
+A C Code has been attached in the repository for verification \label{code:nor_representation}
+\begin{lstlisting}
+./nor_representation.c
+\end{lstlisting}
+
+
+\end{document}
