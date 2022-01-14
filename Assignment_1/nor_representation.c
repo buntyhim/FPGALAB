@@ -1,6 +1,6 @@
 //Code written on January 14, 2022
 //By Himanshu Yadav
-//This program displays a verification truth table for (A+B)(C+D) Logic and it NOR Gate Rresentation
+//This program displays a verification truth table for (A+B)(C+D) Logic and it NOR Gate Representation
 
 #include<stdio.h>
 
