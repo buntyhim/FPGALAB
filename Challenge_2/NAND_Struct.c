@@ -32,6 +32,7 @@ int main ()
         A = num>>3;    B = num>>2;    C = num>>1;    D = num>>0; //changing the inputs , D is LSB
         
         // logic to implement ((AB)'(CD)')' using NAND Gates
+        // NAND Gate connections
         struct NAND nand1 = { A, B, &nandlogic };
         struct NAND nand2 = { C, D, &nandlogic };
         struct NAND nand3 = { nand1.OUT (nand1.IN1, nand1.IN2), nand2.OUT (nand2.IN1, nand2.IN2), &nandlogic };
