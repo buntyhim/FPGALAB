@@ -44,12 +44,12 @@ LCD Display and Pygmy connections
 ----------------------------------
 
 
-| LCD PIN  PYGMY 
+| LCD PIN  ---- PYGMY 
 
-| LCD_D4    6  
-| LCD_D5    8  
-| LCD_D6    10  
-| LCD_D7    12  
-| LCD_RS    2  
-| LCD_EN    4  
-| LCD_RW    GND  
+| LCD_D4 ----   6  
+| LCD_D5  ----  8  
+| LCD_D6 ----   10  
+| LCD_D7  ----  12  
+| LCD_RS  ----  2  
+| LCD_EN  ----  4  
+| LCD_RW  ----  GND  
