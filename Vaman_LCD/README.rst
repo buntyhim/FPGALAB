@@ -51,3 +51,7 @@ LCD Display and Pygmy connections
   LCD_RS  <---->  2.
   LCD_EN  <---->  4.
   LCD_RW  <---->  GND.
+  | First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
