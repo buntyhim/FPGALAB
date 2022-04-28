@@ -43,22 +43,13 @@ Ensure that you have connected a USB-UART adapter connected to the EOSS3 UART pi
 LCD Display and Pygmy connections
 ----------------------------------
 
-Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| LCD PIN  PYGMY 
 
-
-
-| LCD PIN  | PYGMY |
-| ------------- | ------------- |
-| LCD_D4 | 6  |
-| LCD_D5 | 8  |
-| LCD_D6 | 10  |
-| LCD_D7 | 12  |
-| LCD_RS | 2  |
-| LCD_EN | 4  |
-| LCD_RW | GND  |
+| LCD_D4    6  
+| LCD_D5    8  
+| LCD_D6    10  
+| LCD_D7    12  
+| LCD_RS    2  
+| LCD_EN    4  
+| LCD_RW    GND  
